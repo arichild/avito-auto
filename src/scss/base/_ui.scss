@@ -260,3 +260,64 @@ span.error {
 .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
   content: none;
 }
+
+.ui-tabcontent {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.ui-tablinks {
+  position: relative;
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-weight: 500;
+  font-size: 25px;
+  color: #292929;
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 25px;
+  font-family: Aeroport;
+  padding: 0;
+  transition: 1s ease;
+
+  &.active {
+    svg {
+      fill: #ABABAB;
+      transform: rotate(-180deg);
+    }
+  }
+
+  svg {
+    width: 28px;
+    height: 15px;
+    position: absolute;
+    right: 0;
+    fill: #00AAFF;
+    transition: 0.3s transform;
+  }
+}
+
+.ui-tabcontent {
+  font-size: 20px;
+  margin-bottom: 40px;
+
+  li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 2px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 10px;
+      height: 2px;
+      background-color: #292929;
+    }
+  }
+}

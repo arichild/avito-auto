@@ -32,13 +32,13 @@ const svgSprite = gulp.series(svg);
 // const baseTasks = gulp.parallel(html, scss, js, img)
 
 // @task: + fonts.js
-const baseTasks = gulp.series(fonts, gulp.parallel(html, scss, js, img, svg))
+// const baseTasks = gulp.series(fonts, gulp.parallel(html, scss, js, img, svg))
 
 // @task: + svgSprite.js
 // const baseTasks = gulp.series(svgSprite, gulp.parallel(html, scss, js, img, svg))
 
 // @task: fonts.js + svgSprite.js
-// const baseTasks = gulp.series(fonts, svgSprite, gulp.parallel(html, scss, js, img, svg))
+const baseTasks = gulp.series(fonts, svgSprite, gulp.parallel(html, scss, js, img, svg))
 
 const dev = gulp.series(reset, htaccess, baseTasks, watcher)
 
