@@ -4,7 +4,8 @@
   background: transparent;
   font-size: 18px;
   color: #172542;
-  border: 2px solid #000;
+  border: none;
+  outline: 2px solid #000;
   height: 70px;
   line-height: 70px;
   border-radius: 70px;
@@ -31,13 +32,15 @@
 
   &:hover {
     color: #00AAFF;
-    border-color: #00AAFF;
+    // border-color: #00AAFF;
+    outline: 2px solid #00AAFF;
   }
 
   &.blue {
     background: #00AAFF;
     color: #fff;
-    border: none;
+    // border: none;
+    outline: none;
 
     &:hover {
       background: #11b0ff;
@@ -192,4 +195,68 @@
       transform: rotate(-45deg);
     }
   }
+}
+
+.ui-highlighted {
+  background: #000;
+  color: #fff;
+  padding: 0 10px;
+}
+
+span.error {
+  color: #bc0000;
+}
+
+.ui-input.error {
+  margin-bottom: 5px;
+}
+
+.ui-arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  z-index: 9;
+  width: 40px;
+  height: 40px;
+  background-color: #00AAFF;
+  border-radius: 50%;
+  // box-shadow: $shadow;
+  cursor: pointer;
+  padding: 4px;
+  text-align: center;
+  font-size: 0;
+  outline: none;
+  user-select: none;
+  &-prev {
+    left: 0;
+
+    img {
+      position: relative;
+      right: 1px;
+    }
+  }
+  &-next {
+    right: 0;
+
+    img {
+      position: relative;
+      left: 1px;
+    }
+  }
+  &-icon {
+    fill: #000;
+    margin: auto;
+    display: block;
+  }
+  &:hover {
+    background-color: #11b0ff;
+  }
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  content: none;
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  content: none;
 }
