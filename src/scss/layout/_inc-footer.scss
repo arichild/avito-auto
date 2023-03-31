@@ -1,0 +1,23 @@
+.footer {
+  padding: 40px 0;
+  font-size: 14px;
+  color: #AAAAAA;
+
+  .flex {
+    justify-content: space-between;
+  }
+
+  a {
+    color: #AAAAAA;
+    border-bottom: 1px solid #AAAAAA;
+    margin-right: 18px;
+
+    &:hover {
+      color: #b8b8b8;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
