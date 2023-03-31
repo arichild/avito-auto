@@ -334,6 +334,7 @@
   padding: 100px 0;
 
   &-block {
+    position: relative;
     padding: 80px 105px;
     background: #F4F5F6;
     border-radius: 42px;
@@ -353,6 +354,18 @@
 
     &-send {
       text-align: center;
+    }
+
+    .form-star1 {
+      position: absolute;
+      right: -26px;
+      top: -31px;
+    }
+
+    .form-star2 {
+      position: absolute;
+      bottom: -5px;
+      left: -15px;
     }
   }
 }
