@@ -7,33 +7,35 @@
         <div class="greeting-info">
           <div class="greeting-txt">
             <div class="greeting-title">
-              Ищем звезду <div class="word">автомаркетинга</div> Авито
+              Ищем звезду <div class="ui-highlighted">автомаркетинга</div> Авито
             </div>
 
             <div class="greeting-subtitle">
               Авито Авто объявляет конкурс «Лучший автомаркетолог»!
             </div>
 
-            <img src="./images/icon/star-1.svg" class="star-1" alt="alt">
-            <img src="./images/icon/star-2.svg" class="star-2" alt="alt">
+            <img src="./images/icon/star-1.svg" class="star-1" alt="alt" loading="lazy">
+            <img src="./images/icon/star-2.svg" class="star-2" alt="alt" loading="lazy">
           </div>
 
-          <div class="greeting-links">
-            <a href="#" class="ui-btn blue">Участвовать</a>
-            <a href="#" class="ui-btn">Узнать больше</a>
+          <div class="greeting-links"><a href="#" class="ui-btn blue avito-form">Участвовать</a><a href="#" class="ui-btn avito-description">Узнать больше</a>
           </div>
         </div>
 
-        <img src="./images/greeting-car-1.png" class="car" alt="alt">
+        <img src="./images/greeting-car-1.png" class="car" alt="alt" loading="lazy">
       </div>
     </div>
   </div>
 
-  <div class="description">
+  <div class="description" id="avito-description">
     <div class="container">
-      <p>Это соревнование между лучшими маркетологами страны в образовательном формате. <br>
-      Здесь можно раскрыть свою компетентность, а также узнать прикладную информацию от экспертов <br> области. Шанс победить есть
-      у каждого!</p>
+      <div class="description-txt">
+        <div class="container">
+          <p>Это соревнование между лучшими маркетологами страны в образовательном формате.
+          Здесь можно раскрыть свою компетентность, а также узнать прикладную информацию от экспертов области. Шанс победить есть
+          у каждого!</p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -44,28 +46,22 @@
           <div class="participation-participants">
             <div class="ui-title">Кто может участвовать</div>
 
-            <div class="participation-participants-subtitle">
-              Сотрудники отделов маркетинга автоцентров:
+            <h5>Сотрудники автоцентров в направлениях легкового и коммерческого транспорта:</h5>
+
+            <ul>
+              <li>Руководители отделов продаж и рекламы</li>
+              <li>Менеджеры по маркетингу</li>
+              <li>Менеджеры по рекламе</li>
+              <li>Интернет-маркетологи</li>
+              <li>Менеджеры по классифайдам</li>
+              <li>Бренд-менеджеры</li>
+            </ul>
+
+            <div class="participation-participants-link flex"><a href="#" class="ui-btn blue avito-form">Подать заявку</a><a href="#" class="ui-btn avito-program">Посмотреть программу</a>
             </div>
 
-            <div class="participation-participants-list">
-              <ul>
-                <li>Руководители отделов продаж и рекламы</li>
-                <li>Менеджеры по маркетингу</li>
-                <li>Менеджеры по рекламе</li>
-                <li>Интернет-маркетологи</li>
-                <li>Менеджеры по классифайдам</li>
-                <li>Бренд-менеджеры</li>
-              </ul>
-            </div>
-
-            <div class="participation-participants-link">
-              <a href="#" class="ui-btn blue">Подать заявку</a>
-              <a href="#" class="ui-btn">Посмотреть программу</a>
-            </div>
-
-            <img src="./images/icon/participation-star1.svg" class="participation-star1" alt="alt">
-            <img src="./images/icon/participation-star2.svg" class="participation-star2" alt="alt">
+            <img src="./images/icon/participation-star1.svg" class="participation-star1" alt="alt" loading="lazy">
+            <img src="./images/icon/participation-star2.svg" class="participation-star2" alt="alt" loading="lazy">
           </div>
         </div>
 
@@ -106,107 +102,623 @@
       <div class="ui-title">Что нужно сделать?</div>
 
       <div class="rules-block">
-        <ul>
+        <ol>
           <li>
-            <div class="rules-block-num">1</div>
-
             Подать заявку на участие в конкурсе с 3 апреля по 20 апреля
           </li>
 
           <li>
-            <div class="rules-block-num">2</div>
-
             Заполнить анкету до 21 апреля включительно
           </li>
 
           <li>
-            <div class="rules-block-num">3</div>
-
             Участвовать в пяти обучающих мероприятиях и по итогам каждого выполнить домашнее задание или пройти тестирование
           </li>
 
           <li>
-            <div class="rules-block-num">4</div>
-
             Пройти финальное тестирование по всем материалам курса
           </li>
 
           <li>
-            <div class="rules-block-num">5</div>
-
             Применить полученные знания в работе с кабинетами вашего ДЦ
           </li>
 
           <li>
-            <div class="rules-block-num check">
-              <img src="./images/icon/check.svg" alt="alt">
-            </div>
+            <!-- <div class="rules-block-num check">
+              <img src="./images/icon/check.svg" alt="alt" loading="lazy">
+            </div> -->
 
             Для участия нужно иметь активный кабинет компании на Авито
           </li>
-        </ul>
+        </ol>
       </div>
 
       <div class="rules-link">
-        <a href="#" class="ui-btn blue">Участвовать</a>
+        <a href="#" class="ui-btn blue avito-form">Участвовать</a>
       </div>
     </div>
   </div>
 
-  <div class="form">
+  <div class="program" id="avito-program">
+    <div class="container">
+      <div class="ui-title">Программа конкурса</div>
+
+      <div class="program-slider">
+        <div class="swiper swiper-program">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="program-content">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="prgram-content-img">
+                      <img src="./images/program-img-1.png" alt="alt" loading="lazy">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="program-content-info">
+                      <div class="date">22 апреля</div>
+
+                      <div class="ui-title mini">Как получать отзывы на 5 звёзд от клиентов, найти амбассадоров и помочь выстроить бизнес-процессы по сбору отзывов
+                      внутри ДЦ</div>
+
+                      <p>Эксклюзивный воркшоп, на котором вы узнаете об основных тенденциях автобизнеса, об изменениях из-за ухода импортёров и
+                      роли маркетологов. Спикер расскажет о своём опыте построения работы маркетинга и отдела продаж</p>
+
+
+                      <div class="program-content-txt flex">
+                        <span>Ведущая:</span>
+
+                        <div class="program-content-person flex">
+                          <div class="program-content-img">
+                            <img src="./images/mini.png" alt="alt" loading="lazy">
+                          </div>
+
+                          Юлия Овчинникова
+                        </div>
+
+                        <div class="program-content-desc">
+                          Директор по развитию и инновациям ГК КЛЮЧАВТО, победитель премии Автодилер года 2022 в номинации «Лучший клиентский
+                          опыт»
+                        </div>
+                      </div>
+
+                      <div class="program-content-txt">
+                        <span>Формат:</span>
+
+                        Онлайн или офлайн в московском офисе Авито
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="program-content">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="prgram-content-img">
+                      <img src="./images/program-img-1.png" alt="alt" loading="lazy">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="program-content-info">
+                      <div class="date">22 апреля</div>
+
+                      <div class="ui-title mini">Автомаркетинг сегодня: какую роль в нем играет маркетолог</div>
+
+                      <p>Эксклюзивный воркшоп, на котором вы узнаете об основных тенденциях автобизнеса, об изменениях из-за ухода импортёров и
+                      роли маркетологов. Спикер расскажет о своём опыте построения работы маркетинга и отдела продаж</p>
+
+
+                      <div class="program-content-txt flex">
+                        <span>Ведущая:</span>
+
+                        <div class="program-content-person flex">
+                          <div class="program-content-img">
+                            <img src="./images/mini.png" alt="alt" loading="lazy">
+                          </div>
+
+                          Юлия Овчинникова
+                        </div>
+
+                        <div class="program-content-desc">
+                          Директор по развитию и инновациям ГК КЛЮЧАВТО, победитель премии Автодилер года 2022 в номинации «Лучший клиентский
+                          опыт»
+                        </div>
+                      </div>
+
+                      <div class="program-content-txt">
+                        <span>Формат:</span>
+
+                        Онлайн или офлайн в московском офисе Авито
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="program-content">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="prgram-content-img">
+                      <img src="./images/program-img-1.png" alt="alt" loading="lazy">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="program-content-info">
+                      <div class="date">22 апреля</div>
+
+                      <div class="ui-title mini">Как готовить продающие описания объявлений</div>
+
+                      <p>Эксклюзивный воркшоп, на котором вы узнаете об основных тенденциях автобизнеса, об изменениях из-за ухода импортёров и
+                      роли маркетологов. Спикер расскажет о своём опыте построения работы маркетинга и отдела продаж</p>
+
+
+                      <div class="program-content-txt flex">
+                        <span>Ведущая:</span>
+
+                        <div class="program-content-person flex">
+                          <div class="program-content-img">
+                            <img src="./images/mini.png" alt="alt" loading="lazy">
+                          </div>
+
+                          Юлия Овчинникова
+                        </div>
+
+                        <div class="program-content-desc">
+                          Директор по развитию и инновациям ГК КЛЮЧАВТО, победитель премии Автодилер года 2022 в номинации «Лучший клиентский
+                          опыт»
+                        </div>
+                      </div>
+
+                      <div class="program-content-txt">
+                        <span>Формат:</span>
+
+                        Онлайн или офлайн в московском офисе Авито
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="program-content">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="prgram-content-img">
+                      <img src="./images/program-img-1.png" alt="alt" loading="lazy">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="program-content-info">
+                      <div class="date">22 апреля</div>
+
+                      <div class="ui-title mini">Как выжать максимум из Авито и Автохаба</div>
+
+                      <p>Эксклюзивный воркшоп, на котором вы узнаете об основных тенденциях автобизнеса, об изменениях из-за ухода импортёров и
+                      роли маркетологов. Спикер расскажет о своём опыте построения работы маркетинга и отдела продаж</p>
+
+
+                      <div class="program-content-txt flex">
+                        <span>Ведущая:</span>
+
+                        <div class="program-content-person flex">
+                          <div class="program-content-img">
+                            <img src="./images/mini.png" alt="alt" loading="lazy">
+                          </div>
+
+                          Юлия Овчинникова
+                        </div>
+
+                        <div class="program-content-desc">
+                          Директор по развитию и инновациям ГК КЛЮЧАВТО, победитель премии Автодилер года 2022 в номинации «Лучший клиентский
+                          опыт»
+                        </div>
+                      </div>
+
+                      <div class="program-content-txt">
+                        <span>Формат:</span>
+
+                        Онлайн или офлайн в московском офисе Авито
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <!-- <div class="swiper-pagination"></div> -->
+
+          <!-- If we need navigation buttons -->
+        </div>
+      </div>
+
+      <div class="program-control flex">
+        <div class="swiper-button-prev ui-arrow ui-arrow-prev">
+          <img src="./images/icon/arrow-prev.svg" alt="alt" loading="lazy">
+        </div>
+        <div class="swiper-button-next ui-arrow ui-arrow-next">
+          <img src="./images/icon/arrow-next.svg" alt="alt" loading="lazy">
+        </div>
+
+        <div class="program-pagination ">
+          <div class="program-pagination-bullet active"></div>
+
+          <div class="program-pagination-txt">
+            «Как получать отзывы на 5 звёзд от клиентов, найти амбассадоров и помочь выстроить бизнес-процессы по сбору отзывов
+            внутри ДЦ»
+          </div>
+        </div>
+
+        <div class="program-pagination">
+          <div class="program-pagination-bullet"></div>
+
+          <div class="program-pagination-txt">
+            Автомаркетинг сегодня: какую роль в нем играет маркетолог
+          </div>
+        </div>
+
+        <div class="program-pagination">
+          <div class="program-pagination-bullet"></div>
+
+          <div class="program-pagination-txt">
+            «Как готовить продающие описания объявлений»
+          </div>
+        </div>
+
+        <div class="program-pagination">
+          <div class="program-pagination-bullet"></div>
+
+          <div class="program-pagination-txt">
+            «Как выжать максимум из Авито и Автохаба»
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="date">
+    <div class="container">
+      <div class="date-section">
+        <div class="date-info">
+          <div class="date-txt">
+            <div class="date-time">Итоги конкурса подведём в сентябре 2023 года</div>
+
+            <div class="date-title">
+              Награждение победителя — состоится на премии <div class="ui-highlighted">«Автодилер года — 2023»</div>
+            </div>
+          </div>
+
+          <div class="date-link"><a href="#" class="ui-btn blue avito-form">Хочу учиться</a></div>
+        </div>
+
+        <img src="./images/greeting-car-1.png" class="car" alt="alt" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <div class="prizes">
+    <div class="container">
+      <div class="ui-title">Что получат победители</div>
+
+      <div class="prizes-block">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="prizes-place">
+              <div class="prizes-place-img">
+                <img src="./images/prizes-1.png" alt="alt" loading="lazy">
+              </div>
+
+              <div class="prizes-place-title">
+                <p>1 место: звание «Автомаркетолог года»</p>
+              </div>
+
+              <div class="prizes-place-subtitle">
+                <p>MacBook + набор для видеосъемки: стабилизатор для телефона и источник света</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="prizes-place">
+              <div class="prizes-place-img">
+                <img src="./images/prizes-2.png" alt="alt" loading="lazy">
+              </div>
+
+              <div class="prizes-place-title">
+                <p>2 место</p>
+              </div>
+
+              <div class="prizes-place-subtitle">
+                <p>iPhone 14 Pro, 128 ГБ</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="prizes-place">
+              <div class="prizes-place-img">
+                <img src="./images/prizes-333.png" alt="alt" loading="lazy">
+              </div>
+
+              <div class="prizes-place-title">
+                <p>3 место</p>
+              </div>
+
+              <div class="prizes-place-subtitle">
+                <p>Apple Watch 8</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="prizes-another">
+        <div class="prizes-another-title">
+          <p>Все участники:</p>
+        </div>
+
+        <div class="prizes-another-subtitle">
+          <p>Сертификат конкурса, мерч Авито</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form" id="avito-form">
     <div class="container">
       <div class="form-block">
-        <form action="#">
+        <form action="#" class="form-validate">
           <div class="ui-title">Заполните форму для участия</div>
 
           <div class="form-block-fields">
             <div class="row">
               <div class="col-md-4">
                 <div class="ui-field">
-                  <input type="text" class="ui-input" placeholder="Название компании">
+                  <input type="text" class="ui-input" placeholder="Название компании" name="company" id="company">
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="ui-field">
-                  <input type="text" class="ui-input" placeholder="Номер профиля на Авито">
+                  <input type="text" class="ui-input" placeholder="Номер профиля на Авито" name="avitoNumber" id="avitoNumber">
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="ui-field">
-                  <input type="text" class="ui-input" placeholder="Город">
+                  <input type="text" class="ui-input" placeholder="Город" name="town" id="town">
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="ui-field">
-                  <input type="text" class="ui-input" placeholder="ФИО">
+                  <input type="text" class="ui-input" placeholder="ФИО" name="fullname" id="fullname">
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="ui-field">
-                  <input type="text" class="ui-input" placeholder="Телефон">
+                  <input type="text" class="ui-input" placeholder="Телефон" name="phone" id="phone">
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="ui-field">
-                  <input type="text" class="ui-input" placeholder="Электронная почта">
+                  <input type="text" class="ui-input" placeholder="Электронная почта" name="email" id="email">
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="ui-checkbox">
-            <input autocomplete="off" type="checkbox" id="customCheckbox" class="ui-checkbox-input" checked="">
-            <label for="customCheckbox" class="ui-checkbox-label">
-              <span class="default-txt">
-                Я согласен на <a href="#">обработку персональных данных</a>.
-              </span>
-            </label>
+          <div class="form-block-confirm">
+            <div class="ui-checkbox">
+              <input autocomplete="off" type="checkbox" id="customCheckbox" class="ui-checkbox-input" checked="" name="checkbox" id="checkbox">
+              <label for="customCheckbox" class="ui-checkbox-label">
+                <span class="default-txt">
+                  Я согласен на <a href="#">обработку персональных данных и с правилами конкурса.</a>
+                </span>
+              </label>
+            </div>
           </div>
+
 
           <div class="form-block-send">
             <button class="ui-btn blue">Отправить форму</button>
           </div>
         </form>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            jQuery(document).ready(function ($) {
+              $(".form-validate").validate({
+                errorElement: "span",
+
+                rules: {
+                  company: {
+                    required: true,
+                  },
+                  avitoNumber: {
+                    required: true,
+                    number: true,
+                  },
+                  town: {
+                    required: true,
+                    lettersonly: true,
+                  },
+                  fullname: {
+                    required: true,
+                    lettersonly: true,
+                  },
+                  phone: {
+                    required: true,
+                    phone: true,
+                  },
+                  email: {
+                    required: true,
+                    email: true,
+                  },
+                  checkbox: {
+                    required: true,
+                  }
+                },
+
+                messages: {
+                  email: 'Введите корректный email',
+                  checkbox: 'Пожалуйста подтвердите условия соглашения',
+                  avitoNumber: {
+                    number: 'Поле не может содержать буквы'
+                  }
+                },
+
+                errorPlacement: function (error, element) {
+                  if (element.hasClass('ui-checkbox-input')) {
+                    element.closest('.ui-checkbox').append(error);
+                  }
+                  if (element.hasClass('ui-input')) {
+                    element.closest('.ui-field').append(error);
+                  }
+                },
+              });
+            })
+          });
+        </script>
+
+        <img src="./images/icon/form-star1.svg" class="form-star1" alt="alt" loading="lazy">
+        <img src="./images/icon/form-star2.svg" class="form-star2" alt="alt" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <div class="judge">
+    <div class="container">
+      <div class="ui-title">Кто будет оценивать</div>
+
+      <div class="judge-content">
+        <div class="ui-title mini">Эксперты Авито Авто</div>
+
+        <div class="judge-content-list flex">
+          <div class="judge-content-person">
+            <div class="judge-content-img">
+              <img src="./images/judge-1.png" alt="alt" loading="lazy">
+            </div>
+
+            <div class="judge-content-name">Роман Титаренко</div>
+          </div>
+          <div class="judge-content-person">
+            <div class="judge-content-img">
+              <img src="./images/judge-2.png" alt="alt" loading="lazy">
+            </div>
+
+            <div class="judge-content-name">Андрей Горн</div>
+          </div>
+          <div class="judge-content-person">
+            <div class="judge-content-img">
+              <img src="./images/judge-3.png" alt="alt" loading="lazy">
+            </div>
+
+            <div class="judge-content-name">Камран Гусейнов</div>
+          </div>
+          <div class="judge-content-person">
+            <div class="judge-content-img">
+              <img src="./images/judge-4.png" alt="alt" loading="lazy">
+            </div>
+
+            <div class="judge-content-name">Владислав Иванов</div>
+          </div>
+          <div class="judge-content-person">
+            <div class="judge-content-img">
+              <img src="./images/judge-5.png" alt="alt" loading="lazy">
+            </div>
+
+            <div class="judge-content-name">Захар Игнатенко</div>
+          </div>
+          <div class="judge-content-person">
+            <div class="judge-content-img">
+              <img src="./images/judge-6.png" alt="alt" loading="lazy">
+            </div>
+
+            <div class="judge-content-name">Анастасия Параничева</div>
+          </div>
+          <div class="judge-content-person">
+            <div class="judge-content-img">
+              <img src="./images/judge-7.png" alt="alt" loading="lazy">
+            </div>
+
+            <div class="judge-content-name">Елизавета Ломакина</div>
+          </div>
+          <div class="judge-content-person">
+            <div class="judge-content-img">
+              <img src="./images/judge-8.png" alt="alt" loading="lazy">
+            </div>
+
+            <div class="judge-content-name">Юлия Митрофанова</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="judge-content">
+        <div class="ui-title mini">Приглашенные эксперты курса</div>
+
+        <div class="judge-content-list flex">
+          <div class="judge-content-person">
+            <div class="judge-content-img">
+              <img src="./images/judge-9.png" alt="alt" loading="lazy">
+            </div>
+
+            <div class="judge-content-name">Юлия Овчинникова</div>
+          </div>
+          <div class="judge-content-person">
+            <div class="judge-content-img">
+              <img src="./images/judge-10.png" alt="alt" loading="lazy">
+            </div>
+
+            <div class="judge-content-name">Виталий Шония</div>
+          </div>
+          <div class="judge-content-person">
+            <div class="judge-content-img">
+              <img src="./images/judge-11.png" alt="alt" loading="lazy">
+            </div>
+
+            <div class="judge-content-name">Анастасия Червинская</div>
+          </div>
+          <div class="judge-content-person">
+            <div class="judge-content-img">
+              <img src="./images/judge-12.png" alt="alt" loading="lazy">
+            </div>
+
+            <div class="judge-content-name">Данат Мингачев</div>
+          </div>
+          <div class="judge-content-person">
+            <div class="judge-content-img">
+              <img src="./images/judge-13.png" alt="alt" loading="lazy">
+            </div>
+
+            <div class="judge-content-name">Даниил Шардаков</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="judge-content">
+        <div class="ui-title mini">Эксперты Автохаб</div>
+
+        <div class="judge-content-list flex">
+          <div class="judge-content-person">
+            <div class="judge-content-img">
+              <img src="./images/judge-14.png" alt="alt" loading="lazy">
+            </div>
+
+            <div class="judge-content-name">Александр Матвеев</div>
+          </div>
+          <div class="judge-content-person">
+            <div class="judge-content-img">
+              <img src="./images/judge-15.png" alt="alt" loading="lazy">
+            </div>
+
+            <div class="judge-content-name">Эдуард Ефремов</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -218,64 +730,191 @@
       <div class="result-block">
         <div class="ui-title mini">Критерии оценки участников (оценка в баллах):</div>
 
-        <ul>
-          <li>
+        <div class="result-block-list">
+          <div class="result-block-stage">
             <div class="result-block-step">1 этап</div>
 
-            Посещение воркшопов и конференций офлайн/онлайн. Участник может получить дополнительные баллы за активное участие в
-            воркшопах и инициативы
+            <p>
+              Посещение воркшопов и конференций офлайн/онлайн. Участник может получить дополнительные баллы за активное участие в
+              воркшопах и инициативы
+            </p>
 
-            <p>Результат прохождения тестов и домашних заданий после воркшопов</p>
-          </li>
+            <p>
+              Результат прохождения тестов и домашних заданий после воркшопов
+            </p>
+          </div>
 
-          <li>
+          <div class="result-block-stage">
             <div class="result-block-step">2 этап</div>
 
-            Результат прохождения итогового тестирования по всем обучающим материалам курса
-          </li>
+            <p>
+              Результат прохождения итогового тестирования по всем обучающим материалам курса
+            </p>
+          </div>
 
-          <li>
+          <div class="result-block-stage">
             <div class="result-block-step">3 этап</div>
 
-            Практическая часть курса «Как я повысил эффективность работы с Авито Авто»: участники внедряют полученные знания в
-            кабинеты дилерских центров
-          </li>
+            <p>
+              Практическая часть курса «Как я повысил эффективность работы с Авито Авто»: участники внедряют полученные знания в
+              кабинеты дилерских центров
+            </p>
+          </div>
 
-          <li>
+          <div class="result-block-stage">
             <div class="result-block-step">4 этап</div>
 
-            Замер результатов ДО/ПОСЛЕ по динамике продуктов Авито Авто в кабинете ДЦ (1 маркетолог может заявлять работу по
-            нескольким ID дилерского центра)
+            <p>
+              Замер результатов ДО/ПОСЛЕ по динамике продуктов Авито Авто в кабинете ДЦ (1 маркетолог может заявлять работу по
+              нескольким ID дилерского центра)
+            </p>
 
             <p>Подготовка итогового документа по применённым инструментам в аккаунтах и полученным выводам (в письменном виде)</p>
-          </li>
+          </div>
 
-          <li>
+          <div class="result-block-stage">
             <div class="result-block-step">5 этап</div>
 
-            Определение победителей
-          </li>
-        </ul>
+            <p>
+              Определение победителей
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div class="result-link">
-        <a href="#" class="ui-btn blue">Подать заявку сейчас</a>
-      </div>
+      <div class="result-link"><a href="#" class="ui-btn blue avito-form">Подать заявку сейчас</a></div>
     </div>
   </div>
 
   <div class="organizer">
     <div class="container">
       <div class="organizer-txt">
-        <div class="organizer-title">Организатор: Авито Авто</div>
+        <div class="organizer-title">
+          <p>
+            Организатор: Авито Авто
+          </p>
+        </div>
 
-        <div class="organizer-subtitle">Авито — платформа № 1 для продажи и покупки авто в России*. Каждый день сюда заходят более 5 миллионов человек**.</div>
+        <div class="organizer-subtitle">
+          <p>
+            Авито — платформа № 1 для продажи и покупки авто в России*. Каждый день сюда заходят более 5 миллионов человек**.
+          </p>
+        </div>
 
-        <div class="organizer-desc">* По итогам опроса ООО «Автомобильная статистика» об использовании сервисов покупки и продажи авто от 26 июля 2022 года.</div>
+        <div class="organizer-desc">
+          <p>
+            * По итогам опроса ООО «Автомобильная статистика» об использовании сервисов покупки и продажи авто от 26 июля 2022 года.
+          </p>
 
-        <div class="organizer-desc">** По данным внутренней аналитики Авито за МАРТ 2023 ГОДА.</div>
+          <p>
+            ** По данным внутренней аналитики Авито за МАРТ 2023 ГОДА.
+          </p>
+
+        </div>
       </div>
       </div>
+  </div>
+
+  <div class="faq">
+    <div class="container">
+      <div class="ui-title">Ответы на вопросы</div>
+
+      <div class="faq-block">
+        <div class="ui-tab">
+          <button class="ui-tablinks" data-tab="1">
+            Как будете оценивать результаты?
+            <svg class="sprite">
+              <use xlink:href="./images/svg/symbols.svg#arrow"></use>
+            </svg>
+          </button>
+          <div class="ui-tabcontent" data-content="1">
+            <p>Чтобы набрать максимум баллов, нужно принять участие во всех мероприятиях.</p>
+
+            <ul>
+              <li>При анкетировании мы будем смотреть на опыт работы, должность, самостоятельность и личные достижения.</li>
+              <li>Во время воркшопов оцениваем активность, вовлечённость и работу в группах, выполнение домашних заданий.</li>
+              <li>Участие в вебинаре по работе с продуктами Авито.</li>
+              <li>Оценка за проектную работу будет зависеть от применимости для бизнеса.</li>
+              <li>Итоговое тестирование покажет, как хорошо вы усвоили материал.</li>
+              <li>Также на оценку повлияет эффективность размещений дилерского центра на Авито за последние 6 месяцев.</li>
+            </ul>
+          </div>
+          <button class="ui-tablinks" data-tab="2">
+            Что будет, если я не пройду все воркшопы?
+            <svg class="sprite">
+              <use xlink:href="./images/svg/symbols.svg#arrow"></use>
+            </svg>
+          </button>
+          <div class="ui-tabcontent" data-content="2">
+            <p>Чтобы набрать максимум баллов, нужно принять участие во всех мероприятиях.</p>
+
+            <ul>
+              <li>При анкетировании мы будем смотреть на опыт работы, должность, самостоятельность и личные достижения.</li>
+              <li>Во время воркшопов оцениваем активность, вовлечённость и работу в группах, выполнение домашних заданий.</li>
+              <li>Участие в вебинаре по работе с продуктами Авито.</li>
+              <li>Оценка за проектную работу будет зависеть от применимости для бизнеса.</li>
+              <li>Итоговое тестирование покажет, как хорошо вы усвоили материал.</li>
+              <li>Также на оценку повлияет эффективность размещений дилерского центра на Авито за последние 6 месяцев.</li>
+            </ul>
+          </div>
+          <button class="ui-tablinks" data-tab="3">
+            Могу ли я присоединиться к конкурсу после старта?
+            <svg class="sprite">
+              <use xlink:href="./images/svg/symbols.svg#arrow"></use>
+            </svg>
+          </button>
+          <div class="ui-tabcontent" data-content="3">
+            <p>Чтобы набрать максимум баллов, нужно принять участие во всех мероприятиях.</p>
+
+            <ul>
+              <li>При анкетировании мы будем смотреть на опыт работы, должность, самостоятельность и личные достижения.</li>
+              <li>Во время воркшопов оцениваем активность, вовлечённость и работу в группах, выполнение домашних заданий.</li>
+              <li>Участие в вебинаре по работе с продуктами Авито.</li>
+              <li>Оценка за проектную работу будет зависеть от применимости для бизнеса.</li>
+              <li>Итоговое тестирование покажет, как хорошо вы усвоили материал.</li>
+              <li>Также на оценку повлияет эффективность размещений дилерского центра на Авито за последние 6 месяцев.</li>
+            </ul>
+          </div>
+
+          <button class="ui-tablinks" data-tab="4">
+            Могу ли я получить доступ к обучающей программе конкурса после завершения?
+            <svg class="sprite">
+              <use xlink:href="./images/svg/symbols.svg#arrow"></use>
+            </svg>
+          </button>
+          <div class="ui-tabcontent" data-content="4">
+            <p>Чтобы набрать максимум баллов, нужно принять участие во всех мероприятиях.</p>
+
+            <ul>
+              <li>При анкетировании мы будем смотреть на опыт работы, должность, самостоятельность и личные достижения.</li>
+              <li>Во время воркшопов оцениваем активность, вовлечённость и работу в группах, выполнение домашних заданий.</li>
+              <li>Участие в вебинаре по работе с продуктами Авито.</li>
+              <li>Оценка за проектную работу будет зависеть от применимости для бизнеса.</li>
+              <li>Итоговое тестирование покажет, как хорошо вы усвоили материал.</li>
+              <li>Также на оценку повлияет эффективность размещений дилерского центра на Авито за последние 6 месяцев.</li>
+            </ul>
+          </div>
+          <button class="ui-tablinks" data-tab="5">
+            Могу ли я получить доступ к обучающей программе конкурса без участия?
+            <svg class="sprite">
+              <use xlink:href="./images/svg/symbols.svg#arrow"></use>
+            </svg>
+          </button>
+          <div class="ui-tabcontent" data-content="5">
+            <p>Чтобы набрать максимум баллов, нужно принять участие во всех мероприятиях.</p>
+
+            <ul>
+              <li>При анкетировании мы будем смотреть на опыт работы, должность, самостоятельность и личные достижения.</li>
+              <li>Во время воркшопов оцениваем активность, вовлечённость и работу в группах, выполнение домашних заданий.</li>
+              <li>Участие в вебинаре по работе с продуктами Авито.</li>
+              <li>Оценка за проектную работу будет зависеть от применимости для бизнеса.</li>
+              <li>Итоговое тестирование покажет, как хорошо вы усвоили материал.</li>
+              <li>Также на оценку повлияет эффективность размещений дилерского центра на Авито за последние 6 месяцев.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="subscription">
@@ -286,7 +925,7 @@
             <div class="ui-title">Следите за нашими новостями на канале Авито Авто для экспертов:</div>
 
             <a href="#" class="ui-link">
-              <img src="./images/icon/tg.svg" alt="alt">
+              <img src="./images/icon/tg.svg" alt="alt" loading="lazy">
 
               avito_auto_pro
             </a>
@@ -295,7 +934,7 @@
 
         <div class="col-md-5">
           <div class="subscription-side">
-            <img src="./images/icon/tg-large.svg" alt="alt">
+            <img src="./images/icon/tg-large.svg" alt="alt" loading="lazy">
           </div>
         </div>
       </div>
@@ -307,7 +946,7 @@
       <div class="ui-title mini">Служба поддержки</div>
 
       <a href="#" class="ui-link">
-        <img src="./images/icon/tg.svg" alt="alt">
+        <img src="./images/icon/tg.svg" alt="alt" loading="lazy">
 
         t.me/avitomarketolog_tech
       </a>
