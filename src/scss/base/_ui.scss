@@ -25,8 +25,8 @@
   }
 
   @media(max-width: 1024px) {
-    height: 50px;
-    line-height: 50px;
+    height: 55px;
+    line-height: 55px;
     font-size: 16px;
   }
 
@@ -55,6 +55,14 @@
 
   &.mini {
     font-size: 32px;
+
+    @media(max-width: 1024px) {
+      font-size: 30px;
+    }
+
+    @media(max-width: 768px) {
+      font-size: 22px;
+    }
   }
 
   @media(max-width: 1250px) {
@@ -65,7 +73,7 @@
     font-size: 32px;
   }
 
-  @media(max-width: 1024px) {
+  @media(max-width: 768px) {
     font-size: 25px;
   }
 }
@@ -77,6 +85,16 @@
   font-size: 25px;
   padding-left: 52px;
 
+  @media(max-width: 1024px) {
+    font-size: 20px;
+    padding-left: 38px;
+  }
+
+  @media(max-width: 576px) {
+    font-size: 18px;
+    padding-left: 32px;
+  }
+
   img {
     position: absolute;
     top: 50%;
@@ -84,6 +102,16 @@
     transform: translate(0, -50%);
     width: 36px;
     height: 36px;
+
+    @media(max-width: 1024px) {
+      width: 28px;
+      height: 28px;
+    }
+
+    @media(max-width: 576px) {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &:hover {
@@ -103,6 +131,12 @@
   font-family: Aeroport;
   font-weight: 400;
 
+  @media(max-width: 1024px) {
+    height: 55px;
+    font-size: 16px;
+    padding: 0 18px;
+  }
+
   &::placeholder {
     color: #8F8F8F;
   }
@@ -110,6 +144,10 @@
 
 .ui-field {
   margin-bottom: 25px;
+
+  @media(max-width: 576px) {
+    margin-bottom: 20px;
+  }
 }
 
 .ui-checkbox {
@@ -118,8 +156,12 @@
   padding-left: 28px;
   font-size: 18px;
 
+  @media(max-width: 1024px) {
+    font-size: 16px;
+  }
+
   a {
-    font-size: 18px;
+    // font-size: 18px;
     color: #00AAFF;
   }
 
@@ -267,6 +309,12 @@ span.error {
   content: none;
 }
 
+.swiper-button-next, .swiper-button-prev{
+  @media(max-width: 768px) {
+    display: none;
+  }
+}
+
 .ui-tabcontent {
   display: none;
 
@@ -289,6 +337,20 @@ span.error {
   font-family: Aeroport;
   padding: 0;
   cursor: pointer;
+  padding-right: 40px;
+
+  @media(max-width: 1024px) {
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+
+  @media(max-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media(max-width: 576px) {
+    font-size: 18px;
+  }
 
   &.active {
     svg {
@@ -308,15 +370,28 @@ span.error {
     right: 0;
     fill: #00AAFF;
     transition: 0.3s transform;
-    top: 50%;
+    top: 10px;
     right: 0;
-    transform: translate(0, -50%);
+    pointer-events: none;
+
+    @media(max-width: 1024px) {
+      width: 20px;
+    }
   }
 }
 
 .ui-tabcontent {
   font-size: 20px;
   margin-bottom: 40px;
+
+  @media(max-width: 1024px) {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+
+  @media(max-width: 768px) {
+    font-size: 16px;
+  }
 
   li {
     position: relative;
