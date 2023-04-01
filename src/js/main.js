@@ -123,6 +123,8 @@ function blockTo(className) {
   }
 }
 
-blockTo("avito-form")
-blockTo("avito-program")
-blockTo("avito-description")
+if (anchors.length) {
+  blockTo("avito-form")
+  blockTo("avito-program")
+  blockTo("avito-description")
+}

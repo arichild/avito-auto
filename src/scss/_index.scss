@@ -571,9 +571,10 @@
     margin: 0 auto;
   }
 
-  &-links {
+  &-link {
     // margin-left: 40px;
     text-align: center;
+    line-height: 0;
 
     .ui-btn {
       margin-right: 20px;
@@ -802,6 +803,7 @@
 
   &-link {
     text-align: center;
+    line-height: 0;
   }
 }
 
