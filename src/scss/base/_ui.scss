@@ -82,10 +82,12 @@
     top: 50%;
     left: 0;
     transform: translate(0, -50%);
+    width: 36px;
+    height: 36px;
   }
 
   &:hover {
-    color: #11b0ff;
+    color: #4fc4ff;
   }
 }
 
@@ -207,6 +209,10 @@ span.error {
   color: #bc0000;
 }
 
+#checkbox-error {
+  display: block;
+}
+
 .ui-input.error {
   margin-bottom: 5px;
 }
@@ -282,13 +288,17 @@ span.error {
   font-size: 25px;
   font-family: Aeroport;
   padding: 0;
-  transition: 1s ease;
+  cursor: pointer;
 
   &.active {
     svg {
       fill: #ABABAB;
       transform: rotate(-180deg);
     }
+  }
+
+  &:hover {
+    color: #00AAFF;
   }
 
   svg {
@@ -298,6 +308,9 @@ span.error {
     right: 0;
     fill: #00AAFF;
     transition: 0.3s transform;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
   }
 }
 

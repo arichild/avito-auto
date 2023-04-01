@@ -104,3 +104,25 @@ if(tabs.length || content.length) {
     tabContent.classList.toggle('active')
   })
 }
+
+const anchors = document.querySelectorAll('a.ui-btn')
+
+function blockTo(className) {
+  for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault()
+
+      let arr = anchor.classList;
+      let id = Array.from(arr).filter(word => word == className)
+
+      document.getElementById(id[0]).scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      })
+    })
+  }
+}
+
+blockTo("avito-form")
+blockTo("avito-program")
+blockTo("avito-description")
