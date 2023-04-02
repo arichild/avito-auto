@@ -90,7 +90,7 @@ swiper.on('slideChange', function () {
 const tabs = document.querySelector('.ui-tab');
 const content = document.querySelectorAll('.ui-tabcontent');
 
-if(tabs.length || content.length) {
+if(tabs || content.length) {
   tabs.addEventListener('click', (e) => {
     const currTab = e.target.dataset.tab;
     const tab = e.target;
@@ -127,4 +127,25 @@ if (anchors.length) {
   blockTo("avito-form")
   blockTo("avito-program")
   blockTo("avito-description")
+}
+
+function showPopup() {
+  $.magnificPopup.open({
+    items: { src: '../popup/success.html' },
+    type: 'ajax',
+    overflowY: 'scroll',
+    removalDelay: 300,
+    mainClass: 'my-mfp-zoom-in',
+    ajax: {
+      tError: 'Ошибка. <a href="%url%">Контент</a> не может быть загружен',
+    },
+    callbacks: {
+      open: function () {
+        setTimeout(function () {
+          $('.mfp-wrap').addClass('not_delay');
+          $('.white-popup').addClass('not_delay');
+        }, 700);
+      }
+    }
+  });
 }

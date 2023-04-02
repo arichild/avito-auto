@@ -1,0 +1,35 @@
+.success {
+  &-txt {
+    position: relative;
+    max-width: 530px;
+
+    .ui-title {
+      margin-bottom: 30px;
+
+      @media(max-width: 768px) {
+        margin-bottom: 20px;
+      }
+
+      @media(max-width: 420px) {
+        font-size: 20px;
+      }
+    }
+
+    @media(max-width: 1024px) {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  &-subtitle {
+    font-size: 20px;
+
+    @media(max-width: 768px) {
+      font-size: 18px;
+    }
+
+    @media(max-width: 576px) {
+      font-size: 16px;
+    }
+  }
+}
