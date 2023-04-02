@@ -4,15 +4,15 @@
   background: transparent;
   font-size: 18px;
   color: #172542;
-  border: none;
-  outline: 2px solid #000;
+  border: 2px solid #000;
+  // outline: 2px solid #000;
   height: 70px;
   line-height: 70px;
   border-radius: 70px;
   cursor: pointer;
   transition: 0.1s ease-out;
   text-align: center;
-  padding: 0 55px;
+  padding: 0 53px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -33,14 +33,16 @@
   &:hover {
     color: #00AAFF;
     // border-color: #00AAFF;
-    outline: 2px solid #00AAFF;
+    // outline: 2px solid #00AAFF;
+    border-color: #00AAFF;
   }
 
   &.blue {
     background: #00AAFF;
     color: #fff;
     // border: none;
-    outline: none;
+    // outline: none;
+    border: 2px solid #00AAFF;
 
     &:hover {
       background: #11b0ff;
