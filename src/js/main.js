@@ -131,7 +131,7 @@ if (anchors.length) {
 
 function showPopup() {
   $.magnificPopup.open({
-    items: { src: '../popup/success.html' },
+    items: { src: './popup/success.html' },
     type: 'ajax',
     overflowY: 'scroll',
     removalDelay: 300,
