@@ -206,14 +206,14 @@
 }
 
 .description {
-  padding: 60px 0;
+  padding: 60px 0 40px 0;
   background: #F4F5F6;
   font-size: 20px;
   color: #292929;
   text-align: center;
 
   @media(max-width: 768px) {
-    padding: 40px 0;
+    padding: 40px 0 20px 0;
   }
 
   @media(max-width: 768px) {
@@ -510,6 +510,7 @@
 
   &-link {
     text-align: center;
+    line-height: 0;
   }
 
   &-block {
@@ -699,6 +700,7 @@
 
     @media(max-width: 768px) {
       margin-bottom: 30px;
+      font-weight: 700;
     }
   }
 
@@ -1344,6 +1346,10 @@
         margin-bottom: 20px;
       }
 
+      @media(max-width: 768px) {
+        margin-bottom: 10px;
+      }
+
       img {
         width: 140px;
         height: 140px;
@@ -1434,7 +1440,7 @@
 
     @media(max-width: 576px) {
       padding: 40px 20px;
-      margin: 0 -20px;
+      margin: 0 -20px 30px;
       border-radius: 0;
     }
 
