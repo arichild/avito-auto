@@ -8,6 +8,7 @@ const srcFolder = `./src`;
 export const path = {
   build: {
     html: `${buildFolder}/`,
+    popup: `${buildFolder}/popup/`,
     css: `${buildFolder}/css/`,
     js: `${buildFolder}/js/`,
     lib: `${buildFolder}/js/`,
@@ -18,6 +19,7 @@ export const path = {
 
   src: {
     html: `${srcFolder}/*.html`,
+    popup: `${srcFolder}/popup/*.html`,
     scss: `${srcFolder}/scss/style.scss`,
     js: `${srcFolder}/js/*.js`,
     lib: `${srcFolder}/js/lib/*.js`,
@@ -29,6 +31,7 @@ export const path = {
 
   watch: {
     html: `${srcFolder}/**/*.html`,
+    popup: `${srcFolder}/**/*.html`,
     scss: `${srcFolder}/scss/**/*.scss`,
     js: `${srcFolder}/js/*.js`,
     lib: `${srcFolder}/js/lib/*.js`,

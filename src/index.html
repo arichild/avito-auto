@@ -523,7 +523,6 @@
             </div>
           </div>
 
-
           <div class="form-block-send">
             <button class="ui-btn blue">Отправить форму</button>
           </div>
@@ -579,6 +578,10 @@
                   if (element.hasClass('ui-input')) {
                     element.closest('.ui-field').append(error);
                   }
+                },
+
+                submitHandler: function (form) {
+                  showPopup()
                 },
               });
             })
