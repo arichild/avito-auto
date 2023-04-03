@@ -1,11 +1,38 @@
-header {
+.header {
   padding-top: 50px;
 
-  img {
-    width: 150px;
+  &-logo {
+    @media(max-width: 420px) {
+      display: flex;
+      justify-content: space-between;
+    }
 
-    @media(max-width: 1024px) {
-      width: 120px;
+    &-avito {
+      img {
+        height: 25px;
+      }
+    }
+
+    &-avtohub {
+      position: relative;
+      top: 3px;
+
+      @media(max-width: 420px) {
+        position: relative;
+        top: -3px;
+      }
+
+      img {
+        height: 32px;
+      }
+    }
+  }
+
+  a {
+    margin-right: 38px;
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 }

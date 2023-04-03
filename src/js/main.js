@@ -1,6 +1,12 @@
 jQuery.validator.addMethod("lettersonly", function (value, element) {
-  return this.optional(element) || /^([а-яё ]+|[a-z ]+)$/i.test(value);
-}, "Поле может состоять из букв и пробелов, без цифр");
+  let chunks = value.split(' ')
+
+  if (chunks.length === 3 && chunks.indexOf('') === -1) {
+    return true
+  } else {
+    return false
+  }
+}, "Введите корректное ФИО");
 
 jQuery.validator.addMethod("phone", function (value, element) {
   if (value.startsWith('+375')) {
@@ -50,92 +56,60 @@ if (document.getElementById('phone')) {
   })
 }
 
-let swiper = new Swiper(".swiper-program", {
+let swiperProgram = new Swiper(".slider-program", {
+  autoHeight: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+
+  pagination: {
+    el: '.swiper-pagination',
+    spaceBetween: 20
+  },
 });
 
-let pagination = document.querySelectorAll('.program-pagination');
+let swiperPagination = new Swiper(".swiper.program-pagination", {
+  slidesPerView: 4,
+  navigation: false,
 
-if (pagination.length) {
-  pagination.forEach((item, index) => {
-    item.addEventListener('click', (e) => {
-      let parent = item.closest('.program-control')
-      let bulletActive = parent.querySelector('.program-pagination-bullet.active')
-      let bullet = item.querySelector('.program-pagination-bullet')
+  breakpoints: {
+    576: {
+      spaceBetween: 20,
+    },
 
-      swiper.slideTo(index)
+    300: {
+      spaceBetween: 0,
+    }
+  }
+});
 
-      bulletActive.classList.remove('active')
-      bullet.classList.add('active')
-    })
+let pagination = document.querySelectorAll('.program-pagination-bullet');
+
+pagination.forEach((item, index) => {
+  let parent = item.closest('.program-pagination')
+
+  parent.addEventListener('click', () => {
+    swiperProgram.slideTo(index)
+
+    if (index === 2) {
+      swiperPagination.slideTo(index)
+    }
   })
-}
+})
 
-let allBullet = document.querySelectorAll('.program-pagination')
+swiperProgram.on('slideChange', function () {
+  let index = swiperProgram.activeIndex
 
-swiper.on('slideChange', function () {
-  let index = swiper.activeIndex
-  let previousIndex = swiper.previousIndex
 
-  let parent = pagination[index]
-  let bullet = parent.querySelector('.program-pagination-bullet')
-  let parentPrevious = pagination[previousIndex]
-  let bulletPrevious = parentPrevious.querySelector('.program-pagination-bullet.active')
+  swiperPagination.slideTo(index)
 
-  bulletPrevious.classList.remove('active')
-  bullet.classList.add('active')
+  pagination.forEach(item => {
+    item.classList.remove('active')
+  })
+
+  pagination[index].classList.add('active')
 });
-
-swiper.on('navigationNext', () => {
-  let index = swiper.activeIndex
-
-  slideBullet(index, 'next')
-})
-
-swiper.on('navigationPrev', () => {
-  let previousIndex = swiper.previousIndex
-
-  slideBullet(previousIndex, 'prev')
-})
-
-function slideBullet(index, navigation) {
-  let hiddenBullet = document.querySelectorAll('.program-pagination.hidden')
-  let countAcitveBullet = allBullet.length - hiddenBullet.length
-
-  if(navigation === 'next') {
-    if (index >= 4) {
-      allBullet[index].classList.remove('hidden')
-      allBullet[index - countAcitveBullet].classList.add('hidden')
-    }
-  }
-
-  if (navigation === 'prev') {
-    if (index <= hiddenBullet.length) {
-      // allBullet[index - 1].classList.remove('hidden')
-      // allBullet[index + hiddenBullet.length].classList.add('hidden')
-
-      console.log(allBullet)
-      console.log(index)
-      console.log(index + hiddenBullet.length)
-      // console.log(allBullet.length)
-      // console.log(swiper.activeIndex)
-    }
-  }
-}
-
-function bullets() {
-  let maxCount = allBullet.length
-  let hiddenCount = maxCount - 4
-
-  for (let i = maxCount - hiddenCount; i < allBullet.length; i++) {
-    allBullet[i].classList.add('hidden')
-  }
-}
-
-bullets()
 
 const tabs = document.querySelector('.ui-tab');
 const content = document.querySelectorAll('.ui-tabcontent');
@@ -162,13 +136,15 @@ function blockTo(className) {
     anchor.addEventListener('click', function (e) {
       e.preventDefault()
 
-      let arr = anchor.classList;
+      let arr = e.target.classList;
       let id = Array.from(arr).filter(word => word == className)
 
-      document.getElementById(id[0]).scrollIntoView({
-        behavior: 'smooth',
-        block: 'center'
-      })
+      if (id.length) {
+        document.getElementById(id[0]).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        })
+      }
     })
   }
 }
@@ -200,21 +176,23 @@ function showPopup() {
   });
 }
 
-let btnShow = document.querySelector('.ui-more')
+let btnShow = document.querySelectorAll('.ui-more')
 
-btnShow.addEventListener('click', (e) => {
-  if(e.target.classList[0] === btnShow.classList[0]) {
-    let parent = btnShow.closest('.program-content')
-    let list = parent.querySelectorAll('.program-content-txt')
+if(btnShow.length) {
+  btnShow.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      let parent = btn.closest('.program-content')
+      let list = parent.querySelector('.program-content-more')
 
-    list.forEach(item => {
-      item.classList.toggle('hidden')
+      list.classList.toggle('hidden')
+
+      swiperProgram.update()
+
+      if (btn.innerHTML === 'Подробнее') {
+        btn.textContent = 'Скрыть'
+      } else {
+        btn.textContent = 'Подробнее'
+      }
     })
-
-    if (btnShow.innerHTML === 'Подробнее') {
-      btnShow.textContent = 'Скрыть'
-    } else {
-      btnShow.textContent = 'Подробнее'
-    }
-  }
-})
+  })
+}
