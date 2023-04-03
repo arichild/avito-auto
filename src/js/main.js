@@ -74,6 +74,8 @@ if (pagination.length) {
   })
 }
 
+let allBullet = document.querySelectorAll('.program-pagination')
+
 swiper.on('slideChange', function () {
   let index = swiper.activeIndex
   let previousIndex = swiper.previousIndex
@@ -86,6 +88,54 @@ swiper.on('slideChange', function () {
   bulletPrevious.classList.remove('active')
   bullet.classList.add('active')
 });
+
+swiper.on('navigationNext', () => {
+  let index = swiper.activeIndex
+
+  slideBullet(index, 'next')
+})
+
+swiper.on('navigationPrev', () => {
+  let previousIndex = swiper.previousIndex
+
+  slideBullet(previousIndex, 'prev')
+})
+
+function slideBullet(index, navigation) {
+  let hiddenBullet = document.querySelectorAll('.program-pagination.hidden')
+  let countAcitveBullet = allBullet.length - hiddenBullet.length
+
+  if(navigation === 'next') {
+    if (index >= 4) {
+      allBullet[index].classList.remove('hidden')
+      allBullet[index - countAcitveBullet].classList.add('hidden')
+    }
+  }
+
+  if (navigation === 'prev') {
+    if (index <= hiddenBullet.length) {
+      // allBullet[index - 1].classList.remove('hidden')
+      // allBullet[index + hiddenBullet.length].classList.add('hidden')
+
+      console.log(allBullet)
+      console.log(index)
+      console.log(index + hiddenBullet.length)
+      // console.log(allBullet.length)
+      // console.log(swiper.activeIndex)
+    }
+  }
+}
+
+function bullets() {
+  let maxCount = allBullet.length
+  let hiddenCount = maxCount - 4
+
+  for (let i = maxCount - hiddenCount; i < allBullet.length; i++) {
+    allBullet[i].classList.add('hidden')
+  }
+}
+
+bullets()
 
 const tabs = document.querySelector('.ui-tab');
 const content = document.querySelectorAll('.ui-tabcontent');
@@ -149,3 +199,22 @@ function showPopup() {
     }
   });
 }
+
+let btnShow = document.querySelector('.ui-more')
+
+btnShow.addEventListener('click', (e) => {
+  if(e.target.classList[0] === btnShow.classList[0]) {
+    let parent = btnShow.closest('.program-content')
+    let list = parent.querySelectorAll('.program-content-txt')
+
+    list.forEach(item => {
+      item.classList.toggle('hidden')
+    })
+
+    if (btnShow.innerHTML === 'Подробнее') {
+      btnShow.textContent = 'Скрыть'
+    } else {
+      btnShow.textContent = 'Подробнее'
+    }
+  }
+})
