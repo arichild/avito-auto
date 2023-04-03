@@ -1,6 +1,12 @@
 jQuery.validator.addMethod("lettersonly", function (value, element) {
-  return this.optional(element) || /^([а-яё ]+|[a-z ]+)$/i.test(value);
-}, "Поле может состоять из букв и пробелов, без цифр");
+  let chunks = value.split(' ')
+
+  if (chunks.length === 3 && chunks.indexOf('') === -1) {
+    return true
+  } else {
+    return false
+  }
+}, "Введите корректное ФИО");
 
 jQuery.validator.addMethod("phone", function (value, element) {
   if (value.startsWith('+375')) {
@@ -50,41 +56,59 @@ if (document.getElementById('phone')) {
   })
 }
 
-let swiper = new Swiper(".swiper-program", {
+let swiperProgram = new Swiper(".slider-program", {
+  autoHeight: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+
+  pagination: {
+    el: '.swiper-pagination',
+    spaceBetween: 20
+  },
 });
 
-let pagination = document.querySelectorAll('.program-pagination');
+let swiperPagination = new Swiper(".swiper.program-pagination", {
+  slidesPerView: 4,
+  navigation: false,
 
-if (pagination.length) {
-  pagination.forEach((item, index) => {
-    item.addEventListener('click', (e) => {
-      let parent = item.closest('.program-control')
-      let bulletActive = parent.querySelector('.program-pagination-bullet.active')
-      let bullet = item.querySelector('.program-pagination-bullet')
+  breakpoints: {
+    576: {
+      spaceBetween: 20,
+    },
 
-      swiper.slideTo(index)
+    300: {
+      spaceBetween: 0,
+    }
+  }
+});
 
-      bulletActive.classList.remove('active')
-      bullet.classList.add('active')
-    })
+let pagination = document.querySelectorAll('.program-pagination-bullet');
+
+pagination.forEach((item, index) => {
+  let parent = item.closest('.program-pagination')
+
+  parent.addEventListener('click', () => {
+    swiperProgram.slideTo(index)
+
+    if (index === 2) {
+      swiperPagination.slideTo(index)
+    }
   })
-}
+})
 
-swiper.on('slideChange', function () {
-  let index = swiper.activeIndex
-  let previousIndex = swiper.previousIndex
+swiperProgram.on('slideChange', function () {
+  let index = swiperProgram.activeIndex
 
-  let parent = pagination[index]
-  let bullet = parent.querySelector('.program-pagination-bullet')
-  let parentPrevious = pagination[previousIndex]
-  let bulletPrevious = parentPrevious.querySelector('.program-pagination-bullet.active')
 
-  bulletPrevious.classList.remove('active')
-  bullet.classList.add('active')
+  swiperPagination.slideTo(index)
+
+  pagination.forEach(item => {
+    item.classList.remove('active')
+  })
+
+  pagination[index].classList.add('active')
 });
 
 const tabs = document.querySelector('.ui-tab');
@@ -112,13 +136,15 @@ function blockTo(className) {
     anchor.addEventListener('click', function (e) {
       e.preventDefault()
 
-      let arr = anchor.classList;
+      let arr = e.target.classList;
       let id = Array.from(arr).filter(word => word == className)
 
-      document.getElementById(id[0]).scrollIntoView({
-        behavior: 'smooth',
-        block: 'center'
-      })
+      if (id.length) {
+        document.getElementById(id[0]).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        })
+      }
     })
   }
 }
@@ -148,4 +174,25 @@ function showPopup() {
       }
     }
   });
+}
+
+let btnShow = document.querySelectorAll('.ui-more')
+
+if(btnShow.length) {
+  btnShow.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      let parent = btn.closest('.program-content')
+      let list = parent.querySelector('.program-content-more')
+
+      list.classList.toggle('hidden')
+
+      swiperProgram.update()
+
+      if (btn.innerHTML === 'Подробнее') {
+        btn.textContent = 'Скрыть'
+      } else {
+        btn.textContent = 'Подробнее'
+      }
+    })
+  })
 }
